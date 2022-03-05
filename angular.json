@@ -100,6 +100,37 @@
           }
         }
       }
+    },
+    "ngx-command-palette": {
+      "projectType": "library",
+      "root": "projects/ngx-command-palette",
+      "sourceRoot": "projects/ngx-command-palette/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-command-palette/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-command-palette/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-command-palette/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-command-palette/src/test.ts",
+            "tsConfig": "projects/ngx-command-palette/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-command-palette/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-command-palette-lib"
