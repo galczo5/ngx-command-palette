@@ -1,0 +1,118 @@
+:root {
+  --ngx-command-palette-bg-color: rgba(0, 0, 0, .5);
+
+  --ngx-command-palette-body-bg-color: #efefef;
+  --ngx-command-palette-body-padding: 4px;
+  --ngx-command-palette-body-border-radius: 10px;
+  --ngx-command-palette-body-border-width: 40vw;
+  --ngx-command-palette-body-border-max-height: 50vh;
+
+  --ngx-command-palette-input-wrapper-padding: 20px;
+  --ngx-command-palette-input-wrapper-margin-bottom: 1px solid lightgray;
+
+  --ngx-command-palette-input-font-size: 20px;
+  --ngx-command-palette-input-bg-color: #efefef;
+  --ngx-command-palette-input-border: 0px solid transparent;
+  --ngx-command-palette-input-margin-bottom: 10px;
+
+  --ngx-command-palette-item-padding: 10px 20px;
+  --ngx-command-palette-item-border-radius: 6px;
+
+  --ngx-command-palette-item-label-font-size: 16px;
+  --ngx-command-palette-item-label-font-color: #333333;
+  --ngx-command-palette-item-label-font-weight: bold;
+
+  --ngx-command-palette-item-description-font-size: 12px;
+  --ngx-command-palette-item-description-font-color: gray;
+  --ngx-command-palette-item-description-font-weight: normal;
+
+  --ngx-command-palette-item-icon-margin-right: 5px;
+
+  --ngx-command-palette-item-selected-background: rgba(0, 0, 0, .1);
+  --ngx-command-palette-item-selected-font-color: blue;
+
+  --ngx-command-palette-no-items-font-size: 16px;
+  --ngx-command-palette-no-items-font-color: #333333;
+  --ngx-command-palette-no-items-font-weight: bold;
+  --ngx-command-palette-no-items-padding: 10px 20px;
+}
+
+.ngx-command-palette__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--ngx-command-palette-bg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ngx-command-palette__body {
+  padding: var(--ngx-command-palette-body-padding);
+  background: var(--ngx-command-palette-body-bg-color);
+  border-radius: var(--ngx-command-palette-body-border-radius);
+  width: var(--ngx-command-palette-body-border-width);
+  max-height: var(--ngx-command-palette-body-border-max-height);
+}
+
+.ngx-command-palette__input-wrapper {
+  padding: var(--ngx-command-palette-input-wrapper-padding);
+  border-bottom: var(--ngx-command-palette-input-wrapper-margin-bottom);
+  margin-bottom: var(--ngx-command-palette-input-margin-bottom);
+}
+
+.ngx-command-palette__input {
+  width: 100%;
+  font-size: var(--ngx-command-palette-input-font-size);
+  border: var(--ngx-command-palette-input-border);
+  background: var(--ngx-command-palette-input-bg-color);
+
+  outline: none;
+}
+
+.ngx-command-palette__item {
+  display: block;
+  padding: var(--ngx-command-palette-item-padding);
+  border-radius: var(--ngx-command-palette-item-border-radius);
+}
+
+.ngx-command-palette__item-icon {
+  display: inline-block;
+  margin-right: var(--ngx-command-palette-item-icon-margin-right);
+}
+
+.ngx-command-palette__item-label {
+  font-size: var(--ngx-command-palette-item-label-font-size);
+  font-weight: var(--ngx-command-palette-item-label-font-weight);
+  color: var(--ngx-command-palette-item-label-font-color);
+}
+
+.ngx-command-palette__item-description {
+  font-size: var(--ngx-command-palette-item-description-font-size);
+  font-weight: var(--ngx-command-palette-item-description-font-weight);
+  color: var(--ngx-command-palette-item-description-font-color);
+}
+
+.ngx-command-palette__item--selected {
+  background: var(--ngx-command-palette-item-selected-background);
+  color: var(--ngx-command-palette-item-selected-font-color);
+}
+
+.ngx-command-palette__item--selected .ngx-command-palette__item-label,
+.ngx-command-palette__item--selected .ngx-command-palette__item-description {
+  color: var(--ngx-command-palette-item-selected-font-color);
+}
+
+.ngx-command-palette__no-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--ngx-command-palette-no-items-font-size);
+  font-weight: var(--ngx-command-palette-no-items-font-weight);
+  color: var(--ngx-command-palette-no-items-font-color);
+  padding: var(--ngx-command-palette-no-items-padding);
+}
