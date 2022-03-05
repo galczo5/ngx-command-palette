@@ -19,7 +19,8 @@ export class NgxCommandPaletteService {
     private readonly ref: ApplicationRef,
     private readonly injector: Injector,
     @Inject(DOCUMENT) private readonly document: Document
-  ) { }
+  ) {
+  }
 
   open(config?: NgxCommandPaletteConfig, injector?: Injector): void {
     const factory = this.componentFactoryResolver.resolveComponentFactory(NgxCommandPaletteComponent);
@@ -27,7 +28,7 @@ export class NgxCommandPaletteService {
       Injector.create({
         parent: injector || this.injector,
         providers: [
-          { provide: CONFIG, useValue: {...DefaultNgxCommandPaletteConfig, ...config} }
+          {provide: CONFIG, useValue: {...DefaultNgxCommandPaletteConfig, ...config}}
         ]
       })
     );

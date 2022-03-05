@@ -4,4 +4,4 @@ export type NgxCommandPaletteOption = {
   readonly label?: string;
   readonly description?: string;
   readonly callback?: () => void;
-}
+};

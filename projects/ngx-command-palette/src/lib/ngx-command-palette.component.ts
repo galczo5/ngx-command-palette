@@ -27,7 +27,7 @@ export class NgxCommandPaletteComponent implements OnInit, AfterViewInit, OnDest
   filteredOptions: Array<NgxCommandPaletteOption> = []
   selectedIndex: number = 0;
 
-  @ViewChild('input', { read: ElementRef })
+  @ViewChild('input', {read: ElementRef})
   private readonly inputEl!: ElementRef;
 
   private readonly onDestroy$: Subject<void> = new Subject<void>();
@@ -37,7 +37,8 @@ export class NgxCommandPaletteComponent implements OnInit, AfterViewInit, OnDest
   constructor(
     private readonly commandPaletteService: NgxCommandPaletteService,
     @Inject(CONFIG) public readonly config: NgxCommandPaletteConfig
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.commandPaletteService.getOptions()

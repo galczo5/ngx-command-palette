@@ -3,8 +3,7 @@ import {NgxCommandPaletteOption} from "../ngx-command-palette-option";
 
 @Component({
   selector: 'ngx-command-palette-item',
-  templateUrl: './ngx-command-palette-item.component.html',
-  styleUrls: ['./ngx-command-palette-item.component.css']
+  templateUrl: './ngx-command-palette-item.component.html'
 })
 export class NgxCommandPaletteItemComponent implements OnInit {
 
@@ -14,7 +13,8 @@ export class NgxCommandPaletteItemComponent implements OnInit {
   @Input()
   selected: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

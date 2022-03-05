@@ -16,7 +16,8 @@
              (keydown.escape)="clearInput($event)">
     </div>
     <div class="ngx-command-palette__items">
-      <ngx-command-palette-item *ngFor="let item of filteredOptions; let i = index" [item]="item" [selected]="i === selectedIndex"></ngx-command-palette-item>
+      <ngx-command-palette-item *ngFor="let item of filteredOptions; let i = index" [item]="item"
+                                [selected]="i === selectedIndex"></ngx-command-palette-item>
       <div class="ngx-command-palette__no-items" *ngIf="filteredOptions.length === 0">
         {{ config.emptyText }}
       </div>
