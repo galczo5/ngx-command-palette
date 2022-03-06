@@ -1,9 +1,0 @@
-<div (click)="onClick()"
-     class="ngx-command-palette__item"
-     [class.ngx-command-palette__item--selected]="selected">
-  <span *ngIf="item.iconClass"
-        class="ngx-command-palette__item-icon"
-        [class]="item.iconClass"></span>
-  <span *ngIf="item.label" class="ngx-command-palette__item-label">{{ item.label }}</span>
-  <div *ngIf="item.description" class="ngx-command-palette__item-description">{{ item.description }}</div>
-</div>
